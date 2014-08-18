@@ -1,13 +1,15 @@
 Source: speex
 Section: sound
 Priority: optional
-Maintainer: Ron Lee <ron@debian.org>
+Maintainer: Pexip AS <packaging@pexip.com>
+XSBC-Pexip-Original-Maintainer: Ron Lee <ron@debian.org>
 Build-Depends: debhelper (>= 8.1.3), libogg-dev, dpkg-dev (>= 1.13.19)
 Build-Depends-Indep: doxygen, graphviz
 Standards-Version: 3.9.4.0
 Homepage: http://www.speex.org/
 Vcs-Git: git://git.debian.org/users/ron/speex.git
 Vcs-Browser: http://git.debian.org/?p=users/ron/speex.git;a=summary
+XS-Pexip-Upstream: http://ftp.debian.org/debian/ jessie
 
 Package: speex
 Architecture: any

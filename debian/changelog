@@ -1,3 +1,9 @@
+speex (1.2~rc1.1-1pexip1) pexip; urgency=low
+
+  * Prepare Pexip packaging
+
+ -- David Buchmann <david@pexip.com>  Mon, 18 Aug 2014 11:59:24 +0000
+
 speex (1.2~rc1.1-1) unstable; urgency=low
 
   * Update for newer autoconf/libtool.  Closes: #699630
