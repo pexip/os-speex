@@ -9,7 +9,7 @@ Standards-Version: 3.9.5.0
 Homepage: http://www.speex.org/
 Vcs-Git: git://git.debian.org/users/ron/speex.git
 Vcs-Browser: http://git.debian.org/?p=users/ron/speex.git;a=summary
-XS-Pexip-Upstream: http://ftp.debian.org/debian/ jessie
+XS-Pexip-Upstream: http://ftp.debian.org/debian/ stretch
 
 Package: speex
 Architecture: any
