@@ -1,3 +1,9 @@
+speex (1.2~rc1.2-1pexip2) pexip; urgency=low
+
+  * Migrate to Stretch
+
+ -- John-Mark Bell <jmb@pexip.com>  Sun, 23 Jul 2018 00:26:38 +0100
+
 speex (1.2~rc1.2-1pexip1) pexip; urgency=low
 
   * New upstream release
