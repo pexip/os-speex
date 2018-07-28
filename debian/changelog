@@ -1,4 +1,4 @@
-speex (1.2~rc1.2-1pexip2) pexip; urgency=low
+speex (1.2~rc1.2-1+b2pexip1) pexip; urgency=low
 
   * Migrate to Stretch
 
