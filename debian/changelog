@@ -1,3 +1,10 @@
+speex (1.2.0-1pexip1) pexip; urgency=medium
+
+  * Use upstream 1.2 release
+  * Drop speexdsp library from build
+
+ -- Vincent Sanders <vince@pexip.com>  Tue, 15 Dec 2020 12:12:11 +0000
+
 speex (1.2~rc1.2-1+b2pexip2) pexip; urgency=medium
 
   * Rebuild in buster environment

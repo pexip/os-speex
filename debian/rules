@@ -126,17 +126,12 @@ install-arch-stamp: build-arch
 	if [ -d "$(objdir_sse)" ]; then \
 	    dh_install -plibspeex1    $(objdir_sse)/libspeex/.libs/libspeex.so.* \
 				      usr/lib/$(DEB_HOST_MULTIARCH)/sse2; \
-	    dh_install -plibspeexdsp1 $(objdir_sse)/libspeex/.libs/libspeexdsp.so.* \
-				      usr/lib/$(DEB_HOST_MULTIARCH)/sse2; \
 	fi
 
 	dh_install -plibspeex1    $(objdir)/libspeex/.libs/libspeex.so.* \
 				  usr/lib/$(DEB_HOST_MULTIARCH)
 
-	dh_install -plibspeexdsp1 $(objdir)/libspeex/.libs/libspeexdsp.so.* \
-				  usr/lib/$(DEB_HOST_MULTIARCH)
-
-	dh_install -plibspeex-dev -plibspeexdsp-dev -pspeex --sourcedir=debian/tmp
+	dh_install -plibspeex-dev -pspeex --sourcedir=debian/tmp
 	touch $@
 
 install-indep: build-indep
@@ -167,7 +162,6 @@ binary-arch: install-arch
 	dh_compress -a
 	dh_fixperms -a
 	dh_makeshlibs -plibspeex1 -V"libspeex1 (>= 1.2~beta3-1)"
-	dh_makeshlibs -plibspeexdsp1 -V"libspeexdsp1 (>= 1.2~beta3.2-1)"
 	dh_installdeb -a
 	dh_shlibdeps -a
 	dh_gencontrol -a

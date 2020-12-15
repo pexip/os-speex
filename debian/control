@@ -3,7 +3,7 @@ Section: sound
 Priority: optional
 Maintainer: Pexip AS <packaging@pexip.com>
 XSBC-Pexip-Original-Maintainer: Ron Lee <ron@debian.org>
-Build-Depends: debhelper (>= 8.1.3), libogg-dev, dpkg-dev (>= 1.13.19)
+Build-Depends: debhelper (>= 8.1.3), libogg-dev, dpkg-dev (>= 1.13.19), libspeexdsp-dev (>= 1.2~rc3), pkg-config
 Build-Depends-Indep: doxygen, graphviz
 Standards-Version: 3.9.5.0
 Homepage: http://www.speex.org/
@@ -14,7 +14,7 @@ XS-Pexip-Upstream: http://ftp.debian.org/debian/ stretch
 Package: speex
 Architecture: any
 Multi-Arch: foreign
-Depends: ${shlibs:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: The Speex codec command line tools
  Speex is an audio codec especially designed for compressing voice at low
  bit-rates for applications such as voice over IP (VoIP). In some senses,
@@ -28,7 +28,7 @@ Architecture: any
 Multi-Arch: same
 Section: libs
 Pre-Depends: ${misc:Pre-Depends}
-Depends: ${shlibs:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
 Suggests: speex
 Conflicts: libopal-2.2 (<= 2.2.11~dfsg1-3),
            libopal-2.2-develop (<= 2.2.11~dfsg1-3),
@@ -49,7 +49,7 @@ Package: libspeex-dev
 Architecture: any
 Multi-Arch: same
 Section: libdevel
-Depends: libspeex1 (= ${binary:Version})
+Depends: libspeex1 (= ${binary:Version}), ${misc:Depends}
 Suggests: pkg-config
 Description: The Speex codec library development files
  Speex is an audio codec especially designed for compressing voice at low
@@ -59,37 +59,9 @@ Description: The Speex codec library development files
  .
  This package provides the speex library headers and development files.
 
-Package: libspeexdsp1
-Architecture: any
-Multi-Arch: same
-Section: libs
-Pre-Depends: ${misc:Pre-Depends}
-Depends: ${shlibs:Depends}
-Description: The Speex extended runtime library
- Speex is an audio codec especially designed for compressing voice at low
- bit-rates for applications such as voice over IP (VoIP). In some senses,
- it is meant to be complementary to the Vorbis codec which places a greater
- emphasis on high-quality music reproduction.
- .
- This package provides the runtime library of additional functions that
- are part of the Speex distribution.
-
-Package: libspeexdsp-dev
-Architecture: any
-Multi-Arch: same
-Section: libdevel
-Depends: libspeexdsp1 (= ${binary:Version}), libspeex-dev (= ${binary:Version})
-Suggests: pkg-config
-Description: The Speex extended library development files
- Speex is an audio codec especially designed for compressing voice at low
- bit-rates for applications such as voice over IP (VoIP). In some senses,
- it is meant to be complementary to the Vorbis codec which places a greater
- emphasis on high-quality music reproduction.
- .
- This package provides the speex extended library headers and development files.
-
 Package: speex-doc
 Architecture: all
+Depends: ${misc:Depends}
 Section: doc
 Suggests: speex
 Description: Documentation for speex
@@ -104,6 +76,6 @@ Package: libspeex-dbg
 Section: debug
 Priority: extra
 Architecture: any
-Depends: libspeex1 (= ${binary:Version}), libspeexdsp1 (= ${binary:Version})
-Description: debugging symbols for libspeex and libspeexdsp
+Depends: libspeex1 (= ${binary:Version}), ${misc:Depends}
+Description: debugging symbols for libspeex
  This package provides the detached debug symbols for those libraries.
