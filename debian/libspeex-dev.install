@@ -8,3 +8,4 @@ usr/include/speex/speex_types.h
 usr/lib/*/libspeex.a
 usr/lib/*/libspeex.so
 usr/lib/*/pkgconfig/speex.pc
+usr/share/aclocal/speex.m4

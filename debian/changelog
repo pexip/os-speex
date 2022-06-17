@@ -1,3 +1,74 @@
+speex (1.2.0-1) unstable; urgency=medium
+
+  * Upload to unstable. 
+
+ -- Boyuan Yang <byang@debian.org>  Thu, 14 Apr 2022 14:40:45 -0400
+
+speex (1.2.0-1~exp1) experimental; urgency=medium
+
+  * New upstream release.
+  * Drop all libspeexdsp packages, provided in a separate source package.
+  * Drop Doxygen-related codes, upstream no longer provides Doxyfile.
+  * debian/libspeex1.shlibs: Tighten to (>= 1.2~).
+  * debian/patches/0002-debian-changes.patch: Dropped, merged upstream.
+
+ -- Boyuan Yang <byang@debian.org>  Fri, 01 Apr 2022 18:05:04 -0400
+
+speex (1.2~rc1.2-3) unstable; urgency=medium
+
+  * debian/control: Correct Vcs-* fields. 
+
+ -- Boyuan Yang <byang@debian.org>  Sun, 06 Mar 2022 17:52:41 -0500
+
+speex (1.2~rc1.2-2) unstable; urgency=medium
+
+  * debian/control: Take over maint via ITS. (Closes: #1004992, #960501)
+  * debian/upstream/metadata: Added (upstream GitLab repo).
+  * debian/changelog: Cleanup trailing spaces.
+  * debian/compat: Dropped, useless.
+  * debian/:
+    + Bump debhelper compat to v13. (Closes: #965827)
+    + Bump Standards-Version to 4.6.0.
+    + Apply "wrap-and-sort -abst".
+  * debian/control:
+    + Drop manual -dbg package. (Closes: #960498)
+    + Add missing ${misc:Depends} placeholder.
+    + Mark speex-doc as Multi-Arch: foreign.
+    + Let speex suggests speex-doc (Closes: #805897).
+    + debian/control: Drop ancient Conflicts fields.
+  * debian/rules: Simplified using dh.
+    + Do not set custom compile lags. Use default ones since they
+      are now good enough.
+    + Do not build extra sse2 library for i386. This greatly complicates
+      package maintenance with little benefit, and also not really used
+      by the OS.
+    + Only use fixed point + arm4-asm optimization for armel. Do not use
+      fixed point for armhf. (Closes: #736752)
+      Speex 1.2.0 has newer options, but we need to use them after 1.2.0
+      is packaged.
+  * debian/source/format: Use "3.0 (quilt)".
+  * debian/patches: Convert from 1.0-format direct changes.
+    + debian/patches/0001-CVE-2020-23903.patch:
+      Add patch from Ubuntu. (CVE-2020-23903)
+  * debian/libspeex{1,dsp1}.shlibs: Set up file based on d/rules.
+  * debian/speex-doc.manpages: Dropped. section 3 manpage has not been
+    provided for a long time.
+  * debian/speex-doc.doc-base: Correctly reference documentation in
+    usr/share/doc/speex/.
+
+ -- Boyuan Yang <byang@debian.org>  Thu, 24 Feb 2022 13:03:43 -0500
+
+speex (1.2~rc1.2-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * debian/rules: Use dh_update_autotools_config to make the
+    buildsystem recognize recent architectures like riscv64.
+    (Closes: #894241)
+  * debian/control: Update Vcs-* fields and use git packaging
+    repository under Debian Salsa platform.
+
+ -- Boyuan Yang <byang@debian.org>  Tue, 03 Sep 2019 16:16:35 -0400
+
 speex (1.2~rc1.2-1) unstable; urgency=medium
 
   * Regenerate build system files, mostly to pull in a later libtool.m4
@@ -364,7 +435,7 @@ speex (1.0.rc1-1) unstable; urgency=low
 speex (1.0.beta4-1) unstable; urgency=low
 
   * New upstream release
-  * Now with VAD - Voice Activity Detection and 
+  * Now with VAD - Voice Activity Detection and
     DTX - Discontinuous Transmission
 
  -- A. Maitland Bottoms <bottoms@debian.org>  Fri, 20 Dec 2002 17:53:02 -0500
