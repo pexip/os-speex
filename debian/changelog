@@ -1,6 +1,27 @@
+speex (1.2.1-2) unstable; urgency=medium
+
+  * Bump Standards-Version to 4.6.2.
+  * debian/rules: Refresh comments.
+
+  [ Debian Janitor ]
+  * Use secure URI in Homepage field.
+  * debian/upstream/metadata: Set upstream metadata fields.
+  * debian/changelog: Trim trailing whitespace.
+
+ -- Boyuan Yang <byang@debian.org>  Wed, 01 Feb 2023 11:15:46 -0500
+
+speex (1.2.1-1) unstable; urgency=medium
+
+  * New upstream release. (Closes: #1014554)
+  * debian/upstream/signing-key.asc: Add upstream tarball signing key.
+  * debian/watch: Monitor upstream signed tarball.
+  * debian/patches/0001-CVE-2020-23903.patch: Dropped, merged.
+
+ -- Boyuan Yang <byang@debian.org>  Sat, 17 Sep 2022 13:42:41 -0400
+
 speex (1.2.0-1) unstable; urgency=medium
 
-  * Upload to unstable. 
+  * Upload to unstable.
 
  -- Boyuan Yang <byang@debian.org>  Thu, 14 Apr 2022 14:40:45 -0400
 
@@ -16,7 +37,7 @@ speex (1.2.0-1~exp1) experimental; urgency=medium
 
 speex (1.2~rc1.2-3) unstable; urgency=medium
 
-  * debian/control: Correct Vcs-* fields. 
+  * debian/control: Correct Vcs-* fields.
 
  -- Boyuan Yang <byang@debian.org>  Sun, 06 Mar 2022 17:52:41 -0500
 
@@ -506,4 +527,3 @@ speex (0.5.0-1) unstable; urgency=low
   * Initial Release.
 
  -- A. Maitland Bottoms <bottoms@debian.org>  Tue, 16 Jul 2002 22:02:40 -0400
-
