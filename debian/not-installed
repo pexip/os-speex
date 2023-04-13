@@ -1,0 +1,4 @@
+# libtool .la file
+usr/lib/*/*.la
+# installed by speex-doc
+usr/share/doc/speex/manual.pdf
