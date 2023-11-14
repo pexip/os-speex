@@ -1,3 +1,24 @@
+speex (1.2.1-2) unstable; urgency=medium
+
+  * Bump Standards-Version to 4.6.2.
+  * debian/rules: Refresh comments.
+
+  [ Debian Janitor ]
+  * Use secure URI in Homepage field.
+  * debian/upstream/metadata: Set upstream metadata fields.
+  * debian/changelog: Trim trailing whitespace.
+
+ -- Boyuan Yang <byang@debian.org>  Wed, 01 Feb 2023 11:15:46 -0500
+
+speex (1.2.1-1) unstable; urgency=medium
+
+  * New upstream release. (Closes: #1014554)
+  * debian/upstream/signing-key.asc: Add upstream tarball signing key.
+  * debian/watch: Monitor upstream signed tarball.
+  * debian/patches/0001-CVE-2020-23903.patch: Dropped, merged.
+
+ -- Boyuan Yang <byang@debian.org>  Sat, 17 Sep 2022 13:42:41 -0400
+
 speex (1.2.0debian-1pexip3) pexip-bullseye; urgency=medium
 
   * Bullseye rebuild for ARM64 inclusion
@@ -28,7 +49,7 @@ speex (1.2.0-1pexip1) pexip; urgency=medium
 
 speex (1.2.0-1) unstable; urgency=medium
 
-  * Upload to unstable. 
+  * Upload to unstable.
 
  -- Boyuan Yang <byang@debian.org>  Thu, 14 Apr 2022 14:40:45 -0400
 
@@ -54,9 +75,15 @@ speex (1.2~rc1.2-1+b2pexip1) pexip; urgency=low
 
  -- John-Mark Bell <jmb@pexip.com>  Sun, 23 Jul 2018 00:26:38 +0100
 
+speex (1.2~rc1.2-1pexip1) pexip; urgency=low
+
+  * New upstream release
+
+ -- John-Mark Bell <jmb@pexip.com>  Tue, 18 Apr 2017 09:24:03 +0100
+
 speex (1.2~rc1.2-3) unstable; urgency=medium
 
-  * debian/control: Correct Vcs-* fields. 
+  * debian/control: Correct Vcs-* fields.
 
  -- Boyuan Yang <byang@debian.org>  Sun, 06 Mar 2022 17:52:41 -0500
 
@@ -97,12 +124,6 @@ speex (1.2~rc1.2-2) unstable; urgency=medium
     usr/share/doc/speex/.
 
  -- Boyuan Yang <byang@debian.org>  Thu, 24 Feb 2022 13:03:43 -0500
-
-speex (1.2~rc1.2-1pexip1) pexip; urgency=low
-
-  * New upstream release
-
- -- John-Mark Bell <jmb@pexip.com>  Tue, 18 Apr 2017 09:24:03 +0100
 
 speex (1.2~rc1.2-1.1) unstable; urgency=medium
 
@@ -558,4 +579,3 @@ speex (0.5.0-1) unstable; urgency=low
   * Initial Release.
 
  -- A. Maitland Bottoms <bottoms@debian.org>  Tue, 16 Jul 2002 22:02:40 -0400
-

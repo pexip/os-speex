@@ -23,7 +23,9 @@ endif
 
 endif
 
-ifneq (,$(filter $(DEB_HOST_ARCH), mips mipsel))
+ifneq (,$(filter $(DEB_HOST_ARCH), mipsel mips))
+# Only use fixed point for mipsel, mips, and armel (see above)
+# Otherwise, use floating point for armhf, amd64, i386, and all others
 EXTRA_CONFIG_FLAGS = --enable-fixed-point
 endif
 

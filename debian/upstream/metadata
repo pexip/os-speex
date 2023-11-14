@@ -1,2 +1,5 @@
 ---
-Repository: https://gitlab.xiph.org/xiph/speex
+Bug-Database: https://gitlab.xiph.org/xiph/speex/-/issues
+Bug-Submit: https://gitlab.xiph.org/xiph/speex/-/issues/new
+Repository: https://gitlab.xiph.org/xiph/speex.git
+Repository-Browse: https://gitlab.xiph.org/xiph/speex
