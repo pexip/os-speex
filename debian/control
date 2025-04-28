@@ -8,14 +8,19 @@ XSBC-Pexip-Original-Uploaders:
 Build-Depends:
  debhelper-compat (= 13),
  libogg-dev,
- pkg-config,
+ pkgconf,
 Build-Depends-Indep:
  doxygen,
  graphviz,
-Standards-Version: 4.6.2
+Standards-Version: 4.7.0
 Homepage: https://www.speex.org/
 Vcs-Git: https://salsa.debian.org/debian/speex.git
 Vcs-Browser: https://salsa.debian.org/debian/speex
+Description: Speex codec library
+ Speex is an audio codec especially designed for compressing voice at low
+ bit-rates for applications such as voice over IP (VoIP). In some senses,
+ it is meant to be complementary to the Vorbis codec which places a greater
+ emphasis on high-quality music reproduction.
 XS-Pexip-Upstream: http://deb.debian.org/debian/ trixie
 
 Package: libspeex-dev
@@ -26,12 +31,9 @@ Depends:
  libspeex1 (= ${binary:Version}),
  ${misc:Depends},
 Suggests:
- pkg-config,
-Description: The Speex codec library development files
- Speex is an audio codec especially designed for compressing voice at low
- bit-rates for applications such as voice over IP (VoIP). In some senses,
- it is meant to be complementary to the Vorbis codec which places a greater
- emphasis on high-quality music reproduction.
+ pkgconf,
+Description: ${source:Synopsis} (development files)
+ ${source:Extended-Description}
  .
  This package provides the speex library headers and development files.
 
@@ -46,11 +48,8 @@ Depends:
  ${shlibs:Depends},
 Suggests:
  speex,
-Description: The Speex codec runtime library
- Speex is an audio codec especially designed for compressing voice at low
- bit-rates for applications such as voice over IP (VoIP). In some senses,
- it is meant to be complementary to the Vorbis codec which places a greater
- emphasis on high-quality music reproduction.
+Description: ${source:Synopsis} (runtime library)
+ ${source:Extended-Description}
  .
  This package provides the speex runtime library.
 
@@ -61,11 +60,8 @@ Depends:
  ${shlibs:Depends},
 Suggests:
  speex-doc,
-Description: The Speex codec command line tools
- Speex is an audio codec especially designed for compressing voice at low
- bit-rates for applications such as voice over IP (VoIP). In some senses,
- it is meant to be complementary to the Vorbis codec which places a greater
- emphasis on high-quality music reproduction.
+Description: Command-line tools for Speex codec
+ ${source:Extended-Description}
  .
  This package contains the encoder and decoder command-line applications.
 
@@ -78,9 +74,6 @@ Depends:
 Suggests:
  speex,
 Description: Documentation for speex
- Speex is an audio codec especially designed for compressing voice at low
- bit-rates for applications such as voice over IP (VoIP). In some senses,
- it is meant to be complementary to the Vorbis codec which places a greater
- emphasis on high-quality music reproduction.
+ ${source:Extended-Description}
  .
  This package contains the Speex documentation.

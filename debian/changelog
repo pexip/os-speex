@@ -1,3 +1,11 @@
+speex (1.2.1-3) unstable; urgency=medium
+
+  * Bump Standards-Version to 4.7.0.
+  * Update build-dependency pkg-config => pkgconf.
+  * debian/control: Move package description to source package section.
+
+ -- Boyuan Yang <byang@debian.org>  Tue, 29 Oct 2024 19:45:00 -0400
+
 speex (1.2.1-2+pexip24u3) pexip-bookworm; urgency=medium
 
   * New versioning scheme
